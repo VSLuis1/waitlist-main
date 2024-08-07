@@ -159,7 +159,7 @@ function PageHook() {
                     />
                   </span>
                   <span className="bg-clip-text text-transparent dark:bg-gradient-to-r bg-gradient-to-tr dark:from-white from-black to-neutral-600 dark:to-neutral-700">
-                    Templates & Resources!
+                    Coming Soon!
                   </span>
                 </div>
               </div>
@@ -168,12 +168,10 @@ function PageHook() {
               </p> */}
             </div>
             <h1 className="text-3xl font-bold  sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent dark:bg-gradient-to-r bg-gradient-to-tr dark:from-white from-black to-neutral-600 dark:to-neutral-800 capitalize md:max-w-2xl lg:max-w-3xl mx-auto ">
-              Join The Waitlist for My Courses Today!
+            Discover a New Era of Luxurious Fashion!
             </h1>
             <p className="max-w-[600px]  leading-7 text-center text-[16px] bg-clip-text text-transparent dark:bg-gradient-to-br bg-gradient-to-tr dark:from-white from-black to-neutral-600 dark:to-neutral-700 mx-auto ">
-              Discover an Array of Incredible Courses and Be Prepared for an
-              Exciting Wave of New Resources on the Horizon. Sign up to Our
-              Waitlist to be notified when we launch!
+            Welcome to the epitome of luxury and sophistication. Our exclusive collection embodies the perfect blend of timeless elegance and contemporary style. Every piece is meticulously crafted with the finest materials and unparalleled attention to detail, ensuring that each garment is not just clothing, but a statement.
             </p>
             {errors.email && (
               <p className="border dark:border-white/25 border-[#704705] flex gap-x-3 items-center p-2 pl-5 max-w-md bg-gradient-to-r from-10% dark:from-[#704705] text-[#3a2503] from-[#f5a524] via-30% dark:via-black dark:to-black to-100% to-[#704705] mx-auto rounded-md dark:text-white ">
@@ -234,69 +232,12 @@ function PageHook() {
                 className="flex items-center justify-center gap-x-3 bg-gradient-to-tr from-black from-50% via-black/40 to-gray-600/40 via-45% border-t-gray-700  disabled:cursor-not-allowed lg:w-36 shadow-md  border border-b-0 border-r-0 border-l-0 bg-black  mt-4 lg:mt-0 rounded-md px-2 py-2.5 w-full  font-InterMedium text-sm text-gray-200 dark:text-gray-500 "
                 type="submit"
               >
-                <TbArrowsJoin2 className="text-[#383127]" />
                 {isSubmitting ? (
                   "loading "
                 ) : (
                   <span className="shrink-0">Join Waitlist</span>
                 )}
               </button>
-
-              {people.map((testimonial, idx) => (
-                <div
-                  className=" relative group"
-                  key={testimonial.name}
-                  onMouseEnter={() => setHoveredIndex(testimonial.id)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <AnimatePresence mode="wait">
-                    {hoveredIndex === testimonial.id && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 20, scale: 0.6 }}
-                        animate={{
-                          opacity: 1,
-                          y: 0,
-                          scale: 1,
-                          transition: {
-                            type: "spring",
-                            stiffness: 260,
-                            damping: 10,
-                          },
-                        }}
-                        exit={{ opacity: 0, y: 20, scale: 0.6 }}
-                        style={{
-                          translateX: translateX,
-                          rotate: rotate,
-                          whiteSpace: "nowrap",
-                        }}
-                        className="absolute hidden lg:flex  -top-16 -left-1/2 translate-x-1/2  text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
-                      >
-                        <div className="absolute hidden lg:flex inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
-                        <div className="absolute hidden lg:flex left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
-                        <div className="font-bold text-white relative z-30 text-base">
-                          {testimonial.name}
-                        </div>
-                        <div className="text-white text-xs">
-                          {testimonial.designation}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-
-                  <div>
-                    <Link href={testimonial.href}>
-                      <Image
-                        onMouseMove={handleMouseMove}
-                        height={100}
-                        width={100}
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="object-cover  hidden lg:block rounded-full h-11 w-6  group-hover:scale-105 group-hover:z-30   relative transition duration-500"
-                      />
-                    </Link>
-                  </div>
-                </div>
-              ))}
             </form>
           </div>
           <div className="p-3 rounded-lg border dark:border-white/10 border-neutral-400 dark:border-opacity-10 relative top-14 sm:top-14 lg:top-24 max-w-xl mx-auto flex flex-col lg:flex-row justify-between items-center text-sm">
